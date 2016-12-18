@@ -1,0 +1,15 @@
+<ion-view view-title="Barcode Scanner">
+  <ion-content>
+    <button class="button button-balanced button-large button-block" ng-click="barcodeScan()">
+      Tara
+    </button>
+
+    <div class="card" ng-if="barcodeState">
+      <div class="item item-text-wrap">
+        {{barcodeContent}}
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>
