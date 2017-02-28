@@ -38,9 +38,36 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
     }
   })
 
-  
+    .state('app.anasayfa', {
+      url: '/anasayfa',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/anasayfa.html',
+          
+        }
+      }
+    })
+
+      .state('app.search', {
+    url: '/search',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/search.html'
+      }
+    }
+  })
+
+        .state('app.sonuc', {
+      url: '/sonuc',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sonuc.html',
+          controller: 'herbaryumCtrl'
+        }
+      }
+    })
 
   ;
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/barcode');
+  $urlRouterProvider.otherwise('/app/anasayfa');
 });

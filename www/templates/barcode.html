@@ -1,15 +1,15 @@
-<ion-view view-title="Barcode Scanner">
+<ion-view view-title="QR KOD">
   <ion-content>
+    <center><h3>QR Kod İle Bitki Arama</h3></center>
+    <center><img src="img/qr.png"></center>
+  
     <button class="button button-balanced button-large button-block" ng-click="barcodeScan()">
       Tara
     </button>
-
     <div class="card" ng-if="barcodeState">
       <div class="item item-text-wrap">
         {{barcodeContent}}
       </div>
     </div>
-
-
   </ion-content>
 </ion-view>

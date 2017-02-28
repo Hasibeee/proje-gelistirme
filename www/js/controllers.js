@@ -21,7 +21,13 @@ angular.module('starter.controllers', [])
       // Error
     });
   }
-
-
 })
 
+
+
+.controller('herbaryumCtrl', function($scope,$rootScope,$http) {
+  $http.get($scope.webServiceUrl+"json_herbaryum.php")
+  .then(function(response){
+    $rootScope.herbaryums = response.data;
+  });
+}); 
