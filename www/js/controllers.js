@@ -23,11 +23,9 @@ angular.module('starter.controllers', [])
   }
 })
 
-
-
 .controller('herbaryumCtrl', function($scope,$rootScope,$http) {
-  $http.get($scope.webServiceUrl+"json_herbaryum.php")
+  $http.get('http://www.json-generator.com/api/json/get/bVBGDwlzuG?indent=2')
   .then(function(response){
-    $rootScope.herbaryums = response.data;
+    $scope.myData = response.data;
   });
-}); 
+});

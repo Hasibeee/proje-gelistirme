@@ -1,38 +1,58 @@
 <ion-view view-title="SONUC">
-  <ion-content>
-  <div class="item item-thumbnail-left">
-    
-      <img src="u937203851_proje.rAdi"><br>
-      <label >
-          <span class="input-label">Bitki Kod Adı</span>
-          <p>{{u937203851_proje.hid}}</p>
-        </label>
 
-  </div>
-  </div>
-      <label class="item item-input">
-          <span class="input-label">Bitkinin Familyası</span>
-          <p>{{u937203851_proje.fid}}</p>
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Bitkinin Türü</span>
-          <p>{{u937203851_proje.tur}}</p>
-        </label>
-      <label class="item item-input">
-          <span class="input-label">Bulunduğu Bölge</span>
-          <p>{{u937203851_proje.bolge}}</p>
-        </label>
-      <label class="item item-input">
+ <ion-content>
+<div ng-app="myApp" , ng-controller="herbaryumCtrl" > 
+
+  <ion-item ng-repeat="x in myData">
+   <ion-list>
+   <label class="item item-input">
+          <span class="input-label">Bitki ID </span>
+           {{x.ID}}
+           </label>
+
+          <label class="item item-input">
+          <span class="input-label">Familya</span>
+        {{x.FAMILYA}}
+          </label>
+
+          <label class="item item-input">
+          <span class="input-label">Cins </span>
+             {{x.CINS}}
+          </label>
+
+          <label class="item item-input">
+          <span class="input-label">Tür</span>
+           {{x.TUR}}
+          </label>
+
+          <label class="item item-input">
+          <span class="input-label">Bölge</span>
+            {{x.BOLGE}}
+          </label>
+
+          <label class="item item-input">
           <span class="input-label">Bulan Kişi</span>
-          <p>{{u937203851_proje.bKisi}}</p>
-        </label>
-      <label class="item item-input">
-          <span class="input-label">Tanımlayan Kişi</span>
-          <p>{{u937203851_proje.tKisi}}</p>
-        </label>
-     <label class="item item-input">
-          <span class="input-label">Açıklaması</span>
-          <p>{{u937203851_proje.aciklama}}</p>
-        </label>
-      </ion-content>
-</ion-view>
+            {{x.BULAN_KISI}}
+          </label>
+
+          <label class="item item-input">
+          <span class="input-label">Tanımlayan Kişi </span>
+            {{x.TANIMLAYAN_KISI}}
+          </label>
+          
+          <label class="item item-input">
+          <span class="input-label"> Açıklama </span>
+             <textarea >{{x.ACIKLAMA}}</textarea>
+          </label>
+
+          
+          
+         
+
+         
+
+        </ion-list>
+  </ion-item>
+  </div>
+  </ion-content>
+</div>
